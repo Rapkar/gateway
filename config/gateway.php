@@ -1,4 +1,8 @@
 <?php
+use Illuminate\Support\Facades\DB;
+class dbs{
+    public $merchant_id= DB::select('SELECT * FROM items WHERE id  = ?', [$id]);
+}
 
 return [
 
@@ -12,7 +16,7 @@ return [
     // Zarinpal gateway
     //--------------------------------
     'zarinpal' => [
-        'merchant-id'  => 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+        'merchant-id'  => " xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
         'type'         => 'zarin-gate',             // Types: [zarin-gate || normal]
         'callback-url' => '/',
         'server'       => 'germany',                // Servers: [germany || iran || test]

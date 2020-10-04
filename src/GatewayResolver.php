@@ -126,8 +126,9 @@ class GatewayResolver
 	 * @param int $port
 	 * @throws PortNotFoundException
 	 */
-	function make($port)
+	function make($port,$user_id=null)
     {
+		if($user_id==)
         if ($port InstanceOf Mellat) {
             $name = Enum::MELLAT;
         } elseif ($port InstanceOf Parsian) {
